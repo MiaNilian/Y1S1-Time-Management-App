@@ -2,7 +2,5 @@
 # storing single activities and their titles, times and dates.
 
 class Activity:
-    Title = "Empty Activity"
-
     def __init__(self, title, date, time):
-        self.title 
+        self.title = "Empty Activity"
