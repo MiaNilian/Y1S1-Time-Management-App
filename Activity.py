@@ -3,6 +3,6 @@
 
 class Activity:
     def __init__(self, title, date, time):
-        self.title = "Empty Activity"
-        self.date = "No Date"
-        self.time = "No Time"
+        self.title = title
+        self.date = date
+        self.time = time
