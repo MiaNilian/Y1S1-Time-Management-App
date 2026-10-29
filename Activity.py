@@ -4,3 +4,5 @@
 class Activity:
     def __init__(self, title, date, time):
         self.title = "Empty Activity"
+        self.date = "No Date"
+        self.time = "No Time"
