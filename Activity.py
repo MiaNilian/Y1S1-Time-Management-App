@@ -11,6 +11,7 @@ class Activity:
                     raise ValueError("Title cannot be empty") # returns an error if invalid
         self.validate_date(date) # calls the validate_date function to check if the date is valid
         self.validate_time(time) # calls the validate_time function to check if the time is valid
+        # below this line: stores the title, date and time in the class object.
         self.title = title
         self.date = date
         self.time = time
