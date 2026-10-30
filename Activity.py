@@ -1,11 +1,22 @@
 # This file will create the Class "activity" for the time management app. The Activity class is responsible for
 # storing single activities and their titles, times and dates, As well as validating the input of the user 
 # to ensure that the activity is valid and can be stored in the database.
+import datetime
+
 
 class Activity:
-    def __init__(self, title, date, time):
+    def __init__(self, title, date, time): # initializes the class I guess
+        if title == "": # checks to make sure the title isn't empty
+                    raise ValueError("Title cannot be empty") # returns an error if invalid
+        self.validate_date(date) # calls the validate_date function to check if the date is valid
         self.title = title
         self.date = date
         self.time = time
-        if title == "":
-            raise ValueError("Title cannot be empty")
+        
+        
+    def validate_date(self, date): # function to validate the date input by the user
+        try:
+            datetime.datetime.strptime(date, '%d/%m/%Y') # checks to make sure the date is in the correct format
+            
+        except ValueError:
+            raise ValueError("Incorrect date format, should be DD/MM/YYYY") # returns an error if invalid
