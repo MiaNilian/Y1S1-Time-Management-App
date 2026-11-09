@@ -30,5 +30,3 @@ class Activity:
             
         except ValueError:
             raise ValueError("Incorrect time format, should be HH:MM") # returns an error if invalid
-
-            # test
