@@ -33,6 +33,9 @@ class ActivityManager:
         activity_date = [activity for activity in activities if activity.date == date] # you know the drill by now 
         return activity_date
 
-    def delete_activity():
+    def edit_activity(activity, value, edit): # takes the activity and value the user wants to edit and takes what the user wants to change it to
+        setattr(activity, value, edit) # basically 'activity.value = edit", replacing the old value with the new one
 
-    def edit_activity():
+
+    def delete_activity(activity):
+        del(activity) # temporary I need to check if this even does anything lol
