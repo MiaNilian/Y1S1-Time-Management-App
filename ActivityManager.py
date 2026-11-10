@@ -17,7 +17,7 @@ class ActivityManager:
 
 
     def find_acvtivity_title():
-
+        
     def find_activity_id():
 
     def find_activity_time():
