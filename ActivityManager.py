@@ -30,7 +30,7 @@ class ActivityManager:
         return activity_time 
 
     def find_activity_date():   
-        activity_date = [activity for activity in activities if activity.date == date]
+        activity_date = [activity for activity in activities if activity.date == date] # you know the drill by now 
         return activity_date
 
     def delete_activity():
