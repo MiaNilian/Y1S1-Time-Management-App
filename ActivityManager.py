@@ -1,6 +1,7 @@
 # This file will create the Class "ActivityManager" for the time management app. The ActivityManager class is responsible for
 # managing a collection of Activity objects, providing methods to add, remove, and retrieve activities.
 import Activity
+import ActivityKeeper
 
 class ActivityManager:
 
@@ -29,7 +30,7 @@ class ActivityManager:
         activity_time = [activity for actiity in activities if activity.time == time] # does the same as the last two but for time.
         return activity_time 
 
-    def find_activity_date():   
+    def find_activity_date(activity, date):   
         activity_date = [activity for activity in activities if activity.date == date] # you know the drill by now 
         return activity_date
 
