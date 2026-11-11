@@ -17,26 +17,26 @@ class ActivityManager:
         self.activities.append(activity) # appends the new activity class object to the list of activities 
 
 
-    def find_acvtivity_title(activity, title): # intends to find the activity by title
+    def find_acvtivity_title(self, activity, title): # intends to find the activity by title
         activity_titles = [activity for activity in self.activities if activity.title == title]  # finds all the class objects with the same title attribute, input 'title recieved from main code
         return activity_titles # returns the output 
 
 
-    def find_activity_id(activity, id):
+    def find_activity_id(self, activity, id):
         activity_id = [activity for activity in self.activities if activity.id == id] # does the same as the title one but for IDs
         return activity_id
 
-    def find_activity_time(activity, time):
-        activity_time = [activity for actiity in self.activities if activity.time == time] # does the same as the last two but for time.
+    def find_activity_time(self, activity, time):
+        activity_time = [activity for activity in self.activities if activity.time == time] # does the same as the last two but for time.
         return activity_time 
 
-    def find_activity_date(activity, date):   
+    def find_activity_date(self, activity, date):   
         activity_date = [activity for activity in self.activities if activity.date == date] # you know the drill by now 
         return activity_date
 
-    def edit_activity(activity, value, edit): # takes the activity and value the user wants to edit and takes what the user wants to change it to
+    def edit_activity(self, activity,  value, edit): # takes the activity and value the user wants to edit and takes what the user wants to change it to
         setattr(activity, value, edit) # basically 'activity.value = edit", replacing the old value with the new one
 
 
-    def delete_activity(activity):
+    def delete_activity(self, activity):
         del(activity) # temporary I need to check if this even does anything lol
