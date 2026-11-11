@@ -17,7 +17,7 @@ class ActivityManager:
         self.activities.append(activity) # appends the new activity class object to the list of activities 
 
 
-    def find_acvtivity_title(self, title): # intends to find the activity by title
+    def find_activity_title(self, title): # intends to find the activity by title
         activity_titles = [activity for activity in self.activities if activity.title == title]  # finds all the class objects with the same title attribute, input 'title recieved from main code
         return activity_titles # returns the output 
 
