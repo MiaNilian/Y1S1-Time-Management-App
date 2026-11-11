@@ -18,20 +18,20 @@ class ActivityManager:
 
 
     def find_acvtivity_title(activity, title): # intends to find the activity by title
-        activity_titles = [activity for activity in activities if activity.title == title]  # finds all the class objects with the same title attribute, input 'title recieved from main code
+        activity_titles = [activity for activity in self.activities if activity.title == title]  # finds all the class objects with the same title attribute, input 'title recieved from main code
         return activity_titles # returns the output 
 
 
     def find_activity_id(activity, id):
-        activity_id = [activity for activity in activities if activity.id == id] # does the same as the title one but for IDs
+        activity_id = [activity for activity in self.activities if activity.id == id] # does the same as the title one but for IDs
         return activity_id
 
     def find_activity_time(activity, time):
-        activity_time = [activity for actiity in activities if activity.time == time] # does the same as the last two but for time.
+        activity_time = [activity for actiity in self.activities if activity.time == time] # does the same as the last two but for time.
         return activity_time 
 
     def find_activity_date(activity, date):   
-        activity_date = [activity for activity in activities if activity.date == date] # you know the drill by now 
+        activity_date = [activity for activity in self.activities if activity.date == date] # you know the drill by now 
         return activity_date
 
     def edit_activity(activity, value, edit): # takes the activity and value the user wants to edit and takes what the user wants to change it to
