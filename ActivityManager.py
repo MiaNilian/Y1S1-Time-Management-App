@@ -8,13 +8,14 @@ class ActivityManager:
     def __init__(self):
         self.activities = [] # creates an empty list to store activities.
         self.next_id = 0 # stores the next ID value
-
+        keeper = ActivityKeeper()
     
 
     def add_activity(self, activity):
         activity.id = self.next_id #assigns the class object with a unique ID
         self.next_id += 1 # increases the number of the next ID by 1 
         self.activities.append(activity) # appends the new activity class object to the list of activities 
+        self.keeper.save(self.activities)
 
 
     def find_activity_title(self, title): # intends to find the activity by title
@@ -36,7 +37,9 @@ class ActivityManager:
 
     def edit_activity(self, activity, value, edit): # takes the activity and value the user wants to edit and takes what the user wants to change it to
         setattr(activity, value, edit) # basically 'activity.value = edit", replacing the old value with the new one
+        self.keeper.save(self.activities)
 
 
     def delete_activity(self, activity):
         self.activities.remove(activity)
+        self.keeper.save(self.activities)
