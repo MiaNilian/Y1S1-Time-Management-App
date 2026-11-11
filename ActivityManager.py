@@ -19,19 +19,24 @@ class ActivityManager:
 
 
     def find_activity_title(self, title): # intends to find the activity by title
+        self.keeper.load(keeper.loaded_activities)
         activity_titles = [activity for activity in self.activities if activity.title == title]  # finds all the class objects with the same title attribute, input 'title recieved from main code
         return activity_titles # returns the output 
+        
 
 
     def find_activity_id(self, id):
+        self.keeper.load(keeper.loaded_activities)
         activity_id = [activity for activity in self.activities if activity.id == id] # does the same as the title one but for IDs
         return activity_id
 
     def find_activity_time(self, time):
+        self.keeper.load(keeper.loaded_activities)
         activity_time = [activity for activity in self.activities if activity.time == time] # does the same as the last two but for time.
         return activity_time 
 
     def find_activity_date(self, date):   
+        self.keeper.load(keeper.loaded_activities)
         activity_date = [activity for activity in self.activities if activity.date == date] # you know the drill by now 
         return activity_date
 
