@@ -39,5 +39,5 @@ class ActivityManager:
 
 
     def delete_activity(self, activity):
-        self.activities.remove(activity)
-        self.keeper.save(self.activities)
+        self.activities.remove(activity) # removes the activity from the list
+        self.keeper.save(self.activities) # uses the save function from the keeper, making the delete permanent 

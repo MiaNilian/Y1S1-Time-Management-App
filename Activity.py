@@ -5,7 +5,7 @@
 from datetime import datetime
 
 
-class activity:
+class Activity:
     def __init__(self, title, date, time): # initializes the class I guess
         if title == "": # checks to make sure the title isn't empty
                     raise ValueError("Title cannot be empty") # returns an error if invalid

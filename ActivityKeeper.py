@@ -21,4 +21,4 @@ class ActivityKeeper:
             loaded_activities = json.load(file) 
             for activitys in loaded_activities: 
                 new_activity = Activity(activitys['title'], activitys['date'], activitys['time']) # turns each dict into a new activity class object
-                manager.add_activity(new_activity) # passes it to the manager
+                manager.add_activity(new_activity) # passes the objects to the manager so they can get a unique id for the session
